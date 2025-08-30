@@ -3,6 +3,10 @@ Crimson Eclipse  A deep-red, high-contrast theme for developers who prefer a dar
 
 ---
 
+<img src="screenshot.png" width="50%">
+
+---
+
 ## 📦 Installation
 
 1. Copy `crimson-eclipse.toml` into your Helix themes directory:
