@@ -1,0 +1,185 @@
+# Ashen for Helix
+# -------------------
+# Author: Daniel Fichtinger <daniel@ficd.ca>
+# License: MIT License
+# Upstream: https://sr.ht/~ficd/ashen
+# -------------------
+# Sections:
+# - Syntax highlighting
+# - User interface
+# - Palette
+
+# Syntax highlighting
+# -------------------
+"attribute" = "pink"
+
+"type" = "purple"
+"type.builtin" = "purple"
+"type.parameter" = "purple"
+"type.enum.variant" = "purple"
+
+"constructor" = "pink"
+
+"constant" = "white"
+"constant.builtin" = "purple"
+"constant.character" = { fg = "purple", modifiers = ["bold"] }
+"constant.character.escape" = "orange_light2"
+"constant.numeric" = "orange"
+
+"string" = "orange_light2"
+"string.regexp" = "orange_light2"
+"string.special" = "pink"
+"string.special.url" = { fg = "purple", modifiers = ["bold"] }
+"string.special.path" = { fg = "purple", modifiers = ["bold"] }
+"string.special.symbol" = "purple"
+
+"comment" = { fg = "grey", modifiers = ["italic"] }
+"comment.block.documentation" = { fg = "grey", modifiers = ["italic"] }
+"comment.line.documentation" = { fg = "grey", modifiers = ["italic"] }
+
+"variable" = "purple"
+"variable.parameter" = { fg = "pink", modifiers = ["italic"] }
+"variable.builtin" = "pink"
+"variable.other.member" = { fg = "red" }
+
+"label" = "red" # used for lifetimes
+
+"punctuation" = "purple"
+"punctuation.special" = "purple"
+"punctuation.bracket" = "purple"
+"punctuation.delimiter" = "red"
+
+
+"keyword" = "red"
+"keyword.operator" = "orange"
+"keyword.directive" = { fg = "red", modifiers = ["italic"] }
+"keyword.storage.modifier" = { fg = "red", modifiers = ["italic"] }
+
+"operator" = "orange"
+
+"function" = { fg = "pink", modifiers = ["bold"] }
+"function.builtin" = { fg = "green", modifiers = ["bold", "italic"] }
+"function.macro" = "red"
+
+"tag" = { fg = "orange_glow", modifiers = ["italic"] }
+
+"namespace" = { fg = "orange", modifiers = ["bold"] }
+
+"special" = "orange" # fuzzy highlight
+
+"markup.heading" = { fg = "red", modifiers = ["bold"] }
+"markup.list" = "orange"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.link.url" = { fg = "red", modifiers = ["italic", "underlined"] }
+"markup.link.text" = "red"
+"markup.raw" = { fg = "grey", bg = "g_10" }
+"markup.quote" = { modifiers = ["italic"] }
+
+"diff.plus" = "purple"
+"diff.minus" = "red"
+"diff.delta" = "green"
+
+# User Interface
+# --------------
+"ui.background" = { fg = "text", bg = "background" }
+
+"ui.linenr" = { fg = "dark" }
+"ui.linenr.selected" = { fg = "dark" }
+
+"ui.statusline" = { fg = "text", bg = "red" }
+"ui.statusline.inactive" = { fg = "dark", bg = "purple" }
+"ui.statusline.normal" = { fg = "background", bg = "red", modifiers = [
+  "bold",
+] }
+"ui.statusline.insert" = { fg = "dark", bg = "red", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "background", bg = "pink", modifiers = [
+  "bold",
+] }
+
+"ui.popup" = { fg = "text", bg = "dark" }
+"ui.info" = { fg = "orange", bg = "dark" }
+"ui.window" = { fg = "dark" }
+"ui.help" = { fg = "white", bg = "dark", modifiers = ["bold"] }
+
+"ui.bufferline" = { fg = "white", bg = "background" }
+"ui.bufferline.active" = { fg = "gey", bg = "dark", underline = { color = "orange", style = "line" } }
+"ui.bufferline.background" = { bg = "background" }
+
+"ui.text" = "text"
+"ui.text.focus" = { fg = "grey", bg = "dark", underline = { color = "red", style = "line" }, modifiers = [
+  "bold",
+] }
+"ui.text.inactive" = { fg = "dark" }
+"ui.text.directory" = { fg = "red" }
+
+"ui.virtual" = "dark"
+"ui.virtual.ruler" = { bg = "cursorline" }
+"ui.virtual.whitespace" = "dark"
+"ui.virtual.indent-guide" = "dark"
+"ui.virtual.wrap" = "dark"
+"ui.virtual.inlay-hint" = { fg = "dark", modifiers = ["italic"] }
+"ui.virtual.jump-label" = { fg = "background", bg = "orange", modifiers = [
+  "bold",
+] }
+
+"ui.selection" = { bg = "dark" }
+
+"ui.cursor.normal" = { fg = "red", bg = "orange" }
+"ui.cursor.insert" = { fg = "red", bg = "dark" }
+"ui.cursor.select" = { fg = "background", bg = "red" }
+"ui.cursor.primary.normal" = { fg = "background", bg = "orange", modifiers = [
+  "bold",
+] }
+"ui.cursor.primary.insert" = { fg = "background", bg = "grey", modifiers = [
+  "bold",
+] }
+"ui.cursor.primary.select" = { fg = "background", bg = "orange", modifiers = [
+  "bold",
+] }
+"ui.cursor.match" = { fg = "purple", modifiers = ["underlined"] }
+
+"ui.cursorline.primary" = { bg = "cursorline" }
+"ui.cursorline" = { bg = "dark" }
+
+"ui.highlight" = { fg = "red", bg = "cursorline", underline = { color = "red", style = "line" }, modifiers = [
+  "bold",
+] }
+
+"ui.menu" = { fg = "grey", bg = "dark" }
+"ui.menu.selected" = { fg = "background", bg = "red", modifiers = [
+  "bold",
+] }
+
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "orange", style = "curl" } }
+"diagnostic.info" = { underline = { color = "blue3", style = "dotted" } }
+"diagnostic.hint" = { underline = { color = "orange", style = "dotted" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+
+error = { fg = "red", bg = "dark" }
+warning = { fg = "orange", bg = "dark" }
+info = { fg = "blue3", bg = "dark" }
+hint = { fg = "orange", bg = "dark" }
+
+[palette]
+cursorline = "#191919"
+white = "#ffffff"
+red_flame = "#C53030"
+red_glowing = "#DF6464"
+red_ember = "#B14242"
+red = "#F43E5C"
+orange_light1 = "#f9ca99"
+orange_light2 = "#FAB795"
+orange = "#F09483"
+green = "#14D386"
+blue1 = "#21BFC2"
+blue2 = "#25B2BC"
+blue3 = "#30AAD7"
+red1 = "#E95678"
+dark = "#16161C"
+purple = "#B877DB"
+grey = "#959595"
+pink = "#EE64AE"
+background = "#1C1E26"
+
